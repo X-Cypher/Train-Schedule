@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/trains")
 public class TrainController {
-    private TrainService trainService;
+    private final TrainService trainService;
 
     @Autowired
     public TrainController(TrainService trainService){
