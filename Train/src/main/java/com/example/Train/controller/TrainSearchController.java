@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/search")
 @CrossOrigin
 public class TrainSearchController {
-    private TrainSearchService trainSearchService;
+    private final TrainSearchService trainSearchService;
 
     @Autowired
     public TrainSearchController(TrainSearchService trainSearchService){
