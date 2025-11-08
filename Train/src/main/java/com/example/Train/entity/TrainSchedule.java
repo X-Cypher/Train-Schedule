@@ -18,16 +18,16 @@ public class TrainSchedule {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "train_id") //how to write name: tableName_columnName, Here the table is Train and column is id, hence name = "train_id"
+    @JoinColumn(name = "train_id", referencedColumnName = "id") //how to write name: tableName_columnName, Here the table is Train and column is id, hence name = "train_id"
     @JsonManagedReference
     private Train train;
 
     @ManyToOne
-    @JoinColumn(name = "source_station_id")
+    @JoinColumn(name = "source_station_id", referencedColumnName = "id")
     private Station source;
 
     @ManyToOne
-    @JoinColumn(name = "destination_station_id")
+    @JoinColumn(name = "destination_station_id", referencedColumnName = "id")
     private Station destination;
 
     private String arrivalTime;
